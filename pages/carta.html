@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Dudes De Mi Amor</title>
+    <link rel="stylesheet" href="../styles/carta_style.css">
+    <style>
+        .title {
+            transition: opacity 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title" id="changingTitle">Querida Anto...</h1>
+        <p class="paragraph">Me duele en lo más profundo de mi ser.</p>
+<p class="paragraph">Me duele imaginar que realmente pienses que perdí el amor que te tengo.</p>
+<p class="paragraph">Que me aburriste.</p>
+<p class="paragraph">Que me cansaste.</p>
+<p class="paragraph">Que quiero algo mejor…</p>
+<p class="paragraph"></p>
+<p class="paragraph">No te culpo… sé que lo que estamos viviendo no es algo cotidiano; es confuso y hasta extraño.</p>
+<p class="paragraph">¿Entonces qué?</p>
+<p class="paragraph">Sé que necesitas respuestas claras y directas. Pero esta carta que no es para explicar esta rara situación.</p>
+<p class="paragraph">¿Por qué no? Porque ya lo vamos a ir haciendo con el tiempo que necesite cada uno.</p>
+<p class="paragraph"></p>
+<p class="paragraph">Esta carta no es otra cosa que para dejar en claro lo que siento por vos.</p>
+<p class="paragraph">Me encanta tu forma de ser. Tu belleza. Tus besos. Tus abrazos.</p>
+<p class="paragraph">Me gusta reir con vos (y cuando te enojás, de vos jej). Cocinar juntos. Cagarnos a palo. Hacerte cosquillas.</p>
+<p class="paragraph">Amo tu sensibilidad. Tus caprichos. Tus gustos. Tu forma de amar.</p>
+<p class="paragraph"></p>
+<p class="paragraph">Que núnca te entre alguna duda. Me generás amor. Te amo; y lo seguiré haciendo porque sos por naturaleza un ser de amor.</p>
+<p class="paragraph"></p>
+<p class="paragraph">Sé que estas palabras no concluyen nada de nuestra situación. Pero ahora, más que núnca quiero que sepas que siempre, siempre te voy a amar y estar para todo lo que necesites.</p>
+<p class="paragraph"></p>
+<p class="paragraph">Te amo. Atte. Elias.</p>
+
+<a href="final.html"><button class="btn">Continuar :)</button></a>
+
+    </div>
+
+    <script>
+        const words = ["mía", "Princesa", "Anto"];
+        let currentWordIndex = 0;
+        const titleElement = document.getElementById("changingTitle");
+
+        function changeTitleWord() {
+            titleElement.style.opacity = 0;
+            setTimeout(() => {
+                titleElement.textContent = "Querida " + words[currentWordIndex] + "...";
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                titleElement.style.opacity = 1;
+            }, 2000); // 500ms es el tiempo de transición, debe coincidir con la transición CSS
+        }
+
+        setInterval(changeTitleWord, 5000);
+    </script>
+</body>
+</html>
